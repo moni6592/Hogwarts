@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <title>Cleaning Hogwarts List</title>
+
+</head>
+
+<body>
+    <aside>
+        <div class="filtering">
+            <p data-action="filter" data-filter="All">All Students</p>
+            <p>HOUSES</p>
+            <p data-action="filter" data-filter="gryffindor">Gryffindor</p>
+            <p data-action="filter" data-filter="hufflepuff">Hufflepuff</p>
+            <p data-action="filter" data-filter="ravenclaw">Ravenclaw </p>
+            <p data-action="filter" data-filter="slytherin">Slytherin </p>
+            <p>BLOOD STATUS</p>
+            <p data-action="filter" data-filter="pure-blood">Pure-blood </p>
+            <p data-action="filter" data-filter="half-blood">Half-blood </p>
+            <p data-action="filter" data-filter="muggle">Muggle</p>
+            <p>OTHER</p>
+            <p data-action="filter" data-filter="prefects">Prefects </p>
+            <p data-action="filter" data-filter="inquisitorialsquad">Inquisitorial Squad </p>
+            <p data-action="filter" data-filter="enrolled">Enrolled </p>
+            <p data-action="filter" data-filter="expelled">Expelled </p>
+        </div>
+    </aside>
+    <main>
+        <section class="head">
+            <h2>Displayed Students</h2>
+            <p>Sort by:</p>
+            <div class="sort_by">
+                <button id="sort_by_first_name" data-sort="firstName" data-action="sort" data-sort-direction="asc">First
+                    name A-Z</button>
+                <button id="sort_by_first_name" data-sort="firstName" data-action="sort"
+                    data-sort-direction="desc">First name Z-A</button>
+                <button id="sort_by_last_name" data-sort="lastName" data-action="sort" data-sort-direction="asc">Last
+                    name A-Z</button>
+                <button id="sort_by_last_name" data-sort="lastName" data-action="sort" data-sort-direction="desc">Last
+                    name Z-A</button>
+            </div>
+        </section>
+        <section id="list_of_students">
+            <table id="list">
+
+                <tbody>
+
+                </tbody>
+            </table>
+
+            <template id="student">
+
+                <tr>
+
+                    <td><img id="image" src="images/bones_s.png" alt=""></td>
+                    <td data-field="firstName">First Name</td>
+
+                    <td data-field="lastName">Last Name</td>
+
+                </tr>
+            </template>
+
+        </section>
+        <div class="modal hidden">
+            <div id="popupBox">
+                <button class="closebutton">X</button>
+                <img id="picture" src="images/boot_t.png" alt="profile_picture">
+                <div id="popup_details">
+                    <div class="info">
+                        <p>First name:</p>
+                        <p data-field="firstName">Hannah</p>
+                    </div>
+                    <div class="info">
+                        <p>Middle name:</p>
+                        <p data-field="middleName">None</p>
+                    </div>
+                    <div class="info">
+                        <p>Nickname:</p>
+                        <p data-field="nickName">None</p>
+                    </div>
+                    <div class="info">
+                        <p>Last name:</p>
+                        <p data-field="lastName">Abbott</p>
+                    </div>
+                    <div class="info">
+                        <p>Blood status:</p>
+                        <p data-field="bloodStatus">Pure</p>
+                    </div>
+                    <div class="info">
+                        <p>Gender:</p>
+                        <p data-field="gender">Girl</p>
+                    </div>
+                    <div class="info">
+                        <p>House:</p>
+                        <p data-field="house">Hufflepuff</p>
+                    </div>
+                    <div class="info">
+                        <p>Prefect:</p>
+                        <p data-field="isprefect">No</p>
+                    </div>
+                    <div class="info inq">
+                        <p>Inquisitorial Squad Member:</p>
+                        <p data-field="issquad">No</p>
+                    </div>
+                    <div class="info">
+                        <p>Expelled:</p>
+                        <p data-field="expelled">No</p>
+                    </div>
+                </div>
+                <div id="popupButtons">
+                    <button id="prefect" data-field="prefect">Assign Prefect</button>
+                    <button id="squad" data-field="squad">Assign to Inquisitorial Squad</button>
+                    <button id="expell" data-field="expell">Expell Student</button>
+                </div>
+            </div>
+
+    </main>
+
+
+
+</body>
+
+</html>
